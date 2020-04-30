@@ -1,0 +1,64 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Home /> rendering should render without crashing 1`] = `
+<BrowserRouter
+  keyLength={0}
+>
+  <Router
+    history={
+      Object {
+        "action": "POP",
+        "block": [Function],
+        "createHref": [Function],
+        "go": [Function],
+        "goBack": [Function],
+        "goForward": [Function],
+        "length": 1,
+        "listen": [Function],
+        "location": Object {
+          "hash": "",
+          "pathname": "/",
+          "search": "",
+          "state": undefined,
+        },
+        "push": [Function],
+        "replace": [Function],
+      }
+    }
+  >
+    <Provider
+      store={
+        Object {
+          "clearActions": [Function],
+          "dispatch": [Function],
+          "getActions": [Function],
+          "getState": [Function],
+          "replaceReducer": [Function],
+          "subscribe": [Function],
+        }
+      }
+    >
+      <Home>
+        <section
+          className="hero is-hero-bar"
+        >
+          <div
+            className="hero-body"
+          >
+            <h1
+              className="title"
+            >
+              Home
+            </h1>
+          </div>
+        </section>
+        <section
+          className="section is-main-section"
+        >
+          Home content
+        </section>
+      </Home>
+    </Provider>
+  </Router>
+</BrowserRouter>
+`;
