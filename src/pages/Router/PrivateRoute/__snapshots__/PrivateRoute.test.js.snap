@@ -220,9 +220,9 @@ exports[`<PrivateRoute /> rendering should render without crashing 1`] = `
                     >
                       <span>
                         <b>
-                          React
+                          IT Solver
                         </b>
-                         Firebase
+                         Dashboard
                       </span>
                     </div>
                   </a>
@@ -292,7 +292,7 @@ exports[`<PrivateRoute /> rendering should render without crashing 1`] = `
                     </Link>
                   </li>
                   <SubMenu
-                    label="Dropdown Menu"
+                    label="Billing"
                   >
                     <li
                       className=""
@@ -312,7 +312,7 @@ exports[`<PrivateRoute /> rendering should render without crashing 1`] = `
                         <span
                           className="menu-item-label"
                         >
-                          Dropdown Menu
+                          Billing
                         </span>
                         <div
                           className="dropdown-icon"
@@ -367,7 +367,7 @@ exports[`<PrivateRoute /> rendering should render without crashing 1`] = `
                                     onClick={[Function]}
                                   >
                                     <span>
-                                      Submenu 1
+                                      Channels
                                     </span>
                                   </a>
                                 </LinkAnchor>
@@ -415,7 +415,7 @@ exports[`<PrivateRoute /> rendering should render without crashing 1`] = `
                                     onClick={[Function]}
                                   >
                                     <span>
-                                      Submenu 2
+                                      Subscriptions
                                     </span>
                                   </a>
                                 </LinkAnchor>

@@ -57,7 +57,7 @@ const Aside = ({ handleMobileToggle }) => {
       <Link to={paths.ROOT} className="aside-tools">
         <div className="aside-tools-label">
           <span>
-            <b>React</b> Firebase
+            <b>IT Solver</b> Dashboard
           </span>
         </div>
       </Link>
@@ -85,18 +85,18 @@ const Aside = ({ handleMobileToggle }) => {
                 <span className="icon">
                   <i className="mdi mdi-account-supervisor" />
                 </span>
-                <span className="menu-item-label">Users</span>
+                <span className="menu-item-label">Customers</span>
               </NavLink>
             </li>
           )}
-          <SubMenu label="Dropdown Menu">
+          <SubMenu label="Billing">
             <li>
               <NavLink
                 className={classes.submenuLink}
                 to={paths.SUBMENU_1}
                 onClick={handleMobileToggle}
               >
-                <span>Submenu 1</span>
+                <span>Channels</span>
               </NavLink>
             </li>
             <li>
@@ -105,7 +105,7 @@ const Aside = ({ handleMobileToggle }) => {
                 to={paths.SUBMENU_2}
                 onClick={handleMobileToggle}
               >
-                <span>Submenu 2</span>
+                <span>Subscriptions</span>
               </NavLink>
             </li>
           </SubMenu>
