@@ -83,7 +83,7 @@ export const deleteUser = id => {
     const userToken = await user.getIdToken();
 
     try {
-      await axios(userToken).delete(`/users/${id}`);
+      await axios(userToken).delete(`/customers/${id}`);
     } catch (error) {
       toastr.error('', error);
       return dispatch(USERS_DELETE_USER_FAIL({ error }));
@@ -158,7 +158,7 @@ export const createUser = ({
     body.append('isAdmin', isAdmin);
 
     axios(userToken)
-      .post('/users', body)
+      .post('/customers', body)
       .then(async response => {
         const userCreated = response.data;
 
@@ -258,7 +258,7 @@ export const modifyUser = ({
     body.append('isAdmin', isAdmin);
 
     axios(userToken)
-      .patch(`/users/${id}`, body)
+      .patch(`/customers/${id}`, body)
       .then(response => {
         const userCreated = response.data;
         const { uid } = firebase.auth().currentUser;

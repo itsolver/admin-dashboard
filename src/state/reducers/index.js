@@ -4,7 +4,7 @@ import storage from 'redux-persist/lib/storage';
 import { reducer as toastrReducer } from 'react-redux-toastr';
 
 import { authReducer } from './auth';
-import { usersReducer } from './users';
+import { usersReducer } from './customers';
 
 export default combineReducers({
   auth: persistReducer(

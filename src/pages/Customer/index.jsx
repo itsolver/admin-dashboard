@@ -4,7 +4,7 @@ import { useSelector, shallowEqual } from 'react-redux';
 import ClipLoader from 'react-spinners/ClipLoader';
 
 import UserForm from 'components/UserForm';
-import { createUser, modifyUser } from 'state/actions/users';
+import { createUser, modifyUser } from 'state/actions/customers';
 import paths from 'pages/Router/paths';
 import firebase from 'firebase.js';
 

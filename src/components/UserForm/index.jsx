@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 
 import paths from 'pages/Router/paths';
-import { usersCleanUp } from 'state/actions/users';
+import { usersCleanUp } from 'state/actions/customers';
 import { useChangeHandler } from 'utils/hooks';
 import { validateEmail } from 'utils';
 import './UserForm.scss';

@@ -5,10 +5,10 @@ import classNames from 'classnames';
 import ClipLoader from 'react-spinners/ClipLoader';
 
 import Table from 'components/Table';
-import { fetchUsers, deleteUser, clearUsersData } from 'state/actions/users';
+import { fetchUsers, deleteUser, clearUsersData } from 'state/actions/customers';
 import paths from 'pages/Router/paths';
 import ConfirmationModal from 'components/ConfirmationModal';
-import classes from './Users.module.scss';
+import classes from './Customers.module.scss';
 
 const Users = () => {
   const { usersList, isAdmin, error, loading, deleted } = useSelector(
@@ -119,7 +119,7 @@ const Users = () => {
           {!row.original.isAdmin && (
             <div className="buttons is-right">
               <Link
-                to={`/users/${row.original.id}`}
+                to={`/customers/${row.original.id}`}
                 className="button is-small is-primary"
               >
                 <span className="icon is-small">

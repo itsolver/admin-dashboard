@@ -2,7 +2,7 @@ import React from 'react';
 import { useSelector, shallowEqual } from 'react-redux';
 
 import UserForm from 'components/UserForm';
-import { modifyUser } from 'state/actions/users';
+import { modifyUser } from 'state/actions/customers';
 import ChangePassword from './ChangePassword';
 
 const Profile = () => {

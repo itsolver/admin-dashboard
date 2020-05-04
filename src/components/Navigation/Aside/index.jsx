@@ -93,7 +93,7 @@ const Aside = ({ handleMobileToggle }) => {
             <li>
               <NavLink
                 className={classes.submenuLink}
-                to={paths.SUBMENU_1}
+                to={paths.CHANNELS}
                 onClick={handleMobileToggle}
               >
                 <span>Channels</span>
@@ -102,7 +102,7 @@ const Aside = ({ handleMobileToggle }) => {
             <li>
               <NavLink
                 className={classes.submenuLink}
-                to={paths.SUBMENU_2}
+                to={paths.SUBSCRIPTIONS}
                 onClick={handleMobileToggle}
               >
                 <span>Subscriptions</span>

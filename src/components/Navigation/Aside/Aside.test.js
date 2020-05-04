@@ -54,7 +54,7 @@ describe('<Aside /> rendering', () => {
     ).toEqual(onHandler);
   });
 
-  it('should not render the /users link if it the user is not an admin', () => {
+  it('should not render the /customers link if it the user is not an admin', () => {
     const { component } = mountWithProvider(
       <Aside handleMobileToggle={onHandler} />
     )({
@@ -74,7 +74,7 @@ describe('<Aside /> rendering', () => {
     ).toBeFalsy();
   });
 
-  it('should render the /users link if it the user is an admin', () => {
+  it('should render the /customers link if it the user is an admin', () => {
     const { component } = mountWithProvider(
       <Aside handleMobileToggle={onHandler} />
     )({

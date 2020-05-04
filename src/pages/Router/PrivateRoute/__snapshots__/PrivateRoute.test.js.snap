@@ -331,14 +331,14 @@ exports[`<PrivateRoute /> rendering should render without crashing 1`] = `
                           <Link
                             className="submenuLink"
                             onClick={[Function]}
-                            to="/submenu1"
+                            to="/channels"
                           >
                             <NavLink
                               activeClassName="is-active"
                               className="submenuLink"
                               exact={true}
                               onClick={[Function]}
-                              to="/submenu1"
+                              to="/channels"
                             >
                               <Link
                                 aria-current={null}
@@ -347,7 +347,7 @@ exports[`<PrivateRoute /> rendering should render without crashing 1`] = `
                                 to={
                                   Object {
                                     "hash": "",
-                                    "pathname": "/submenu1",
+                                    "pathname": "/channels",
                                     "search": "",
                                     "state": null,
                                   }
@@ -356,14 +356,14 @@ exports[`<PrivateRoute /> rendering should render without crashing 1`] = `
                                 <LinkAnchor
                                   aria-current={null}
                                   className="submenuLink"
-                                  href="/submenu1"
+                                  href="/channels"
                                   navigate={[Function]}
                                   onClick={[Function]}
                                 >
                                   <a
                                     aria-current={null}
                                     className="submenuLink"
-                                    href="/submenu1"
+                                    href="/channels"
                                     onClick={[Function]}
                                   >
                                     <span>
@@ -379,14 +379,14 @@ exports[`<PrivateRoute /> rendering should render without crashing 1`] = `
                           <Link
                             className="submenuLink"
                             onClick={[Function]}
-                            to="/submenu2"
+                            to="/subscriptions"
                           >
                             <NavLink
                               activeClassName="is-active"
                               className="submenuLink"
                               exact={true}
                               onClick={[Function]}
-                              to="/submenu2"
+                              to="/subscriptions"
                             >
                               <Link
                                 aria-current={null}
@@ -395,7 +395,7 @@ exports[`<PrivateRoute /> rendering should render without crashing 1`] = `
                                 to={
                                   Object {
                                     "hash": "",
-                                    "pathname": "/submenu2",
+                                    "pathname": "/subscriptions",
                                     "search": "",
                                     "state": null,
                                   }
@@ -404,14 +404,14 @@ exports[`<PrivateRoute /> rendering should render without crashing 1`] = `
                                 <LinkAnchor
                                   aria-current={null}
                                   className="submenuLink"
-                                  href="/submenu2"
+                                  href="/subscriptions"
                                   navigate={[Function]}
                                   onClick={[Function]}
                                 >
                                   <a
                                     aria-current={null}
                                     className="submenuLink"
-                                    href="/submenu2"
+                                    href="/subscriptions"
                                     onClick={[Function]}
                                   >
                                     <span>
