@@ -205,8 +205,16 @@ describe('Auth reducer', () => {
       id: 'some userId',
       isAdmin: false,
       name: 'some name',
-      location: 'some location',
+      locationStreet1: "Suite 5, Level 2",            
+      locationStreet2: "123 Test Street",
+      locationSuburb: "Brisbane",
+      locationPostcode: "4000",
+      firstName: "Mike",
+      lastName: "Manners",
+      alternativeEmail: "personalmail@itsolver.net",
+      phone: "0733120457",
       domain: 'test.com',
+      abn: '1234567890',
       tenant: 'some tenantId',
       createdAt: '11/20/2020'
     };

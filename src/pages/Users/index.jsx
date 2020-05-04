@@ -85,14 +85,6 @@ const Users = () => {
       accessor: 'domain'
     },
     {
-      Header: 'Email',
-      accessor: 'email'
-    },
-    {
-      Header: 'Location',
-      accessor: 'location'
-    },
-    {
       Header: 'Admin',
       accessor: 'isAdmin',
       Cell: ({ row }) => (

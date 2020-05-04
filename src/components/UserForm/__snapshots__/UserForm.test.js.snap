@@ -39,15 +39,23 @@ exports[`<UserForm /> rendering should render without crashing 1`] = `
       action={[Function]}
       userData={
         Object {
+          "abn": "1234567890",
+          "alternativeEmail": "personalmail@itsolver.net",
           "createdAt": "11/21/2020",
           "domain": "test.com",
           "email": "mkrukuy@gmail.com",
           "file": null,
+          "firstName": "Mike",
           "id": "test id",
           "isAdmin": false,
-          "location": "Montevideo, Uruguay",
+          "lastName": "Manners",
+          "locationPostcode": "4000",
+          "locationStreet1": "Suite 5, Level 2",
+          "locationStreet2": "123 Test Street",
+          "locationSuburb": "Brisbane",
           "logoUrl": "some logoUrl",
           "name": "Mateo",
+          "phone": "0733120457",
           "tenant": "some tenantId",
         }
       }

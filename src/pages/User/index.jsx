@@ -21,8 +21,17 @@ const User = () => {
   const [user, setUser] = useState({
     name: '',
     email: '',
-    location: '',
+    locationStreet1: '',
+    locationStreet2: '',
+    locationSuburb: '',
+    locationState: '',
+    locationPostcode: '',
+    firstName: '',
+    lastName: '',
+    alternativeEmail: '',
+    phone: '',
     domain: '',
+    abn: '',
     isAdmin: false,
     file: null,
     createdAt: new Date().toDateString()

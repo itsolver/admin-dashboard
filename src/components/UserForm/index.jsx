@@ -59,7 +59,7 @@ const UserForm = ({ isEditing, isProfile, userData, action }) => {
   }
 
   const canSubmit =
-    user.name && user.location && user.domain && user.createdAt && !invalidEmail;
+    user.name && user.locationStreet1 && user.locationSuburb && user.locationState && user.locationPostcode && user.firstName && user.lastName && user.alternativeEmail && user.domain && user.createdAt && !invalidEmail;
 
   const imagePreviewUrl = !user.logoUrl
     ? user.file && URL.createObjectURL(user.file)
@@ -129,7 +129,7 @@ const UserForm = ({ isEditing, isProfile, userData, action }) => {
 
                 <div className="field is-horizontal">
                   <div className="field-label is-normal">
-                    <label className="label">Name</label>
+                    <label className="label">Organisation Name</label>
                   </div>
                   <div className="field-body">
                     <div className="field">
@@ -150,26 +150,6 @@ const UserForm = ({ isEditing, isProfile, userData, action }) => {
 
                 <div className="field is-horizontal">
                   <div className="field-label is-normal">
-                    <label className="label">Location</label>
-                  </div>
-                  <div className="field-body">
-                    <div className="field">
-                      <div className="control">
-                        <input
-                          className="input"
-                          type="text"
-                          name="location"
-                          required
-                          value={user.location}
-                          onChange={onChangeHandler}
-                        />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="field is-horizontal">
-                  <div className="field-label is-normal">
                     <label className="label">Domain</label>
                   </div>
                   <div className="field-body">
@@ -181,6 +161,198 @@ const UserForm = ({ isEditing, isProfile, userData, action }) => {
                           name="domain"
                           required
                           value={user.domain}
+                          onChange={onChangeHandler}
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="field is-horizontal">
+                  <div className="field-label is-normal">
+                    <label className="label">ABN</label>
+                  </div>
+                  <div className="field-body">
+                    <div className="field">
+                      <div className="control">
+                        <input
+                          className="input"
+                          type="text"
+                          name="abn"
+                          required
+                          value={user.abn}
+                          onChange={onChangeHandler}
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="field is-horizontal">
+                  <div className="field-label is-normal">
+                    <label className="label">Street address</label>
+                  </div>
+                  <div className="field-body">
+                    <div className="field">
+                      <div className="control">
+                        <input
+                          className="input"
+                          type="text"
+                          name="locationStreet1"
+                          required
+                          value={user.locationStreet1}
+                          onChange={onChangeHandler}
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="field is-horizontal">
+                  <div className="field-label is-normal">
+                    <label className="label">Street address 2</label>
+                  </div>
+                  <div className="field-body">
+                    <div className="field">
+                      <div className="control">
+                        <input
+                          className="input"
+                          type="text"
+                          name="locationStreet2"
+                          value={user.locationStreet2}
+                          onChange={onChangeHandler}
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="field is-horizontal">
+                  <div className="field-label is-normal">
+                    <label className="label">Suburb</label>
+                  </div>
+                  <div className="field-body">
+                    <div className="field">
+                      <div className="control">
+                        <input
+                          className="input"
+                          type="text"
+                          name="locationSuburb"
+                          required
+                          value={user.locationSuburb}
+                          onChange={onChangeHandler}
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="field is-horizontal">
+                  <div className="field-label is-normal">
+                    <label className="label">State</label>
+                  </div>
+                  <div className="field-body">
+                    <div className="field">
+                      <div className="control">
+                        <input
+                          className="input"
+                          type="text"
+                          name="locationState"
+                          required
+                          value={user.locationState}
+                          onChange={onChangeHandler}
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="field is-horizontal">
+                  <div className="field-label is-normal">
+                    <label className="label">Postcode</label>
+                  </div>
+                  <div className="field-body">
+                    <div className="field">
+                      <div className="control">
+                        <input
+                          className="input"
+                          type="text"
+                          name="locationPostcode"
+                          required
+                          value={user.locationPostcode}
+                          onChange={onChangeHandler}
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <hr />
+                <div className="field is-horizontal">
+                  <div className="field-label is-normal">
+                    <label className="label">First Name</label>
+                  </div>
+                  <div className="field-body">
+                    <div className="field">
+                      <div className="control">
+                        <input
+                          className="input"
+                          type="text"
+                          required
+                          name="firstName"
+                          value={user.firstName}
+                          onChange={onChangeHandler}
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="field is-horizontal">
+                  <div className="field-label is-normal">
+                    <label className="label">Last Name</label>
+                  </div>
+                  <div className="field-body">
+                    <div className="field">
+                      <div className="control">
+                        <input
+                          className="input"
+                          type="text"
+                          required
+                          name="lastName"
+                          value={user.lastName}
+                          onChange={onChangeHandler}
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="field is-horizontal">
+                  <div className="field-label is-normal">
+                    <label className="label">Alternative E-mail</label>
+                  </div>
+                  <div className="field-body">
+                    <div className="field">
+                      <div className="control">
+                        <input
+                          className="input"
+                          type="text"
+                          required
+                          name="alternativeEmail"
+                          value={user.alternativeEmail}
+                          onChange={onChangeHandler}
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="field is-horizontal">
+                  <div className="field-label is-normal">
+                    <label className="label">Phone</label>
+                  </div>
+                  <div className="field-body">
+                    <div className="field">
+                      <div className="control">
+                        <input
+                          className="input"
+                          type="text"
+                          name="phone"
+                          value={user.phone}
                           onChange={onChangeHandler}
                         />
                       </div>
@@ -328,41 +500,240 @@ const UserForm = ({ isEditing, isProfile, userData, action }) => {
                 </div>
               )}
 
-              <div className="field">
-                <label className="label">Name</label>
-                <div className="control is-clearfix">
-                  <input
-                    type="text"
-                    readOnly="readOnly"
-                    className="input is-static"
-                    value={user.name}
-                  />
+              <div className="field is-horizontal">
+                  <div className="field-label is-normal">
+                    <label className="label">Organisation Name</label>
+                  </div>
+                  <div className="field-body">
+                    <div className="field">
+                      <div className="control">
+                        <input
+                          id="name"
+                          className="input"
+                          type="text"
+                          required
+                          name="name"
+                          value={user.name}
+                          onChange={onChangeHandler}
+                        />
+                      </div>
+                    </div>
+                  </div>
                 </div>
-              </div>
 
-              <div className="field">
-                <label className="label">Location</label>
-                <div className="control is-clearfix">
-                  <input
-                    type="text"
-                    readOnly="readOnly"
-                    className="input is-static"
-                    value={user.location}
-                  />
+                <div className="field is-horizontal">
+                  <div className="field-label is-normal">
+                    <label className="label">Domain</label>
+                  </div>
+                  <div className="field-body">
+                    <div className="field">
+                      <div className="control">
+                        <input
+                          className="input"
+                          type="text"
+                          name="domain"
+                          required
+                          value={user.domain}
+                          onChange={onChangeHandler}
+                        />
+                      </div>
+                    </div>
+                  </div>
                 </div>
-              </div>
 
-              <div className="field">
-                <label className="label">Domain</label>
-                <div className="control is-clearfix">
-                  <input
-                    type="text"
-                    readOnly="readOnly"
-                    className="input is-static"
-                    value={user.domain}
-                  />
+                <div className="field is-horizontal">
+                  <div className="field-label is-normal">
+                    <label className="label">ABN</label>
+                  </div>
+                  <div className="field-body">
+                    <div className="field">
+                      <div className="control">
+                        <input
+                          className="input"
+                          type="text"
+                          name="abn"
+                          required
+                          value={user.abn}
+                          onChange={onChangeHandler}
+                        />
+                      </div>
+                    </div>
+                  </div>
                 </div>
-              </div>
+
+                <div className="field is-horizontal">
+                  <div className="field-label is-normal">
+                    <label className="label">Street address</label>
+                  </div>
+                  <div className="field-body">
+                    <div className="field">
+                      <div className="control">
+                        <input
+                          className="input"
+                          type="text"
+                          name="locationStreet1"
+                          required
+                          value={user.locationStreet1}
+                          onChange={onChangeHandler}
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="field is-horizontal">
+                  <div className="field-label is-normal">
+                    <label className="label">Street address 2</label>
+                  </div>
+                  <div className="field-body">
+                    <div className="field">
+                      <div className="control">
+                        <input
+                          className="input"
+                          type="text"
+                          name="locationStreet2"
+                          value={user.locationStreet2}
+                          onChange={onChangeHandler}
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="field is-horizontal">
+                  <div className="field-label is-normal">
+                    <label className="label">Suburb</label>
+                  </div>
+                  <div className="field-body">
+                    <div className="field">
+                      <div className="control">
+                        <input
+                          className="input"
+                          type="text"
+                          name="locationSuburb"
+                          required
+                          value={user.locationSuburb}
+                          onChange={onChangeHandler}
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="field is-horizontal">
+                  <div className="field-label is-normal">
+                    <label className="label">State</label>
+                  </div>
+                  <div className="field-body">
+                    <div className="field">
+                      <div className="control">
+                        <input
+                          className="input"
+                          type="text"
+                          name="locationState"
+                          required
+                          value={user.locationState}
+                          onChange={onChangeHandler}
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="field is-horizontal">
+                  <div className="field-label is-normal">
+                    <label className="label">Postcode</label>
+                  </div>
+                  <div className="field-body">
+                    <div className="field">
+                      <div className="control">
+                        <input
+                          className="input"
+                          type="text"
+                          name="locationPostcode"
+                          required
+                          value={user.locationPostcode}
+                          onChange={onChangeHandler}
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <hr />
+                <div className="field is-horizontal">
+                  <div className="field-label is-normal">
+                    <label className="label">First Name</label>
+                  </div>
+                  <div className="field-body">
+                    <div className="field">
+                      <div className="control">
+                        <input
+                          className="input"
+                          type="text"
+                          required
+                          name="firstName"
+                          value={user.firstName}
+                          onChange={onChangeHandler}
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="field is-horizontal">
+                  <div className="field-label is-normal">
+                    <label className="label">Last Name</label>
+                  </div>
+                  <div className="field-body">
+                    <div className="field">
+                      <div className="control">
+                        <input
+                          className="input"
+                          type="text"
+                          required
+                          name="lastName"
+                          value={user.lastName}
+                          onChange={onChangeHandler}
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="field is-horizontal">
+                  <div className="field-label is-normal">
+                    <label className="label">Alternative E-mail</label>
+                  </div>
+                  <div className="field-body">
+                    <div className="field">
+                      <div className="control">
+                        <input
+                          className="input"
+                          type="text"
+                          required
+                          name="alternativeEmail"
+                          value={user.alternativeEmail}
+                          onChange={onChangeHandler}
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="field is-horizontal">
+                  <div className="field-label is-normal">
+                    <label className="label">Phone</label>
+                  </div>
+                  <div className="field-body">
+                    <div className="field">
+                      <div className="control">
+                        <input
+                          className="input"
+                          type="text"
+                          name="phone"
+                          value={user.phone}
+                          onChange={onChangeHandler}
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
 
               {!isProfile && (
                 <div className="field">
@@ -406,7 +777,15 @@ UserForm.propTypes = {
     id: PropTypes.string,
     isAdmin: PropTypes.bool.isRequired,
     name: PropTypes.string.isRequired,
-    location: PropTypes.string.isRequired,
+    locationStreet1: PropTypes.string.isRequired,
+    locationStreet2: PropTypes.string,
+    locationSuburb: PropTypes.string.isRequired,
+    locationState: PropTypes.string.isRequired,
+    locationPostcode: PropTypes.string.isRequired,
+    firstName: PropTypes.string.isRequired,
+    lastName: PropTypes.string.isRequired,
+    alternativeEmail: PropTypes.string.isRequired,
+    phone: PropTypes.string,
     domain: PropTypes.string.isRequired,
     logoUrl: PropTypes.string,
     tenant: PropTypes.string,

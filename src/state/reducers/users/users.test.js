@@ -52,8 +52,16 @@ describe('Establishments reducer', () => {
       {
         name: 'Test name',
         email: 'Test email',
-        location: 'Test location',
+        locationStreet1: "Suite 5, Level 2",            
+        locationStreet2: "123 Test Street",
+        locationSuburb: "Brisbane",
+        locationPostcode: "4000",
+        firstName: "Mike",
+        lastName: "Manners",
+        alternativeEmail: "personalmail@itsolver.net",
+        phone: "0733120457",
         domain: 'test.com',
+        abn: '123567890',
         createdAt: '11/20/2020'
       }
     ];
@@ -106,8 +114,16 @@ describe('Establishments reducer', () => {
     const user = [
       {
         name: 'some name',
-        location: 'some location',
+        locationStreet1: "Suite 5, Level 2",            
+        locationStreet2: "123 Test Street",
+        locationSuburb: "Brisbane",
+        locationPostcode: "4000",
+        firstName: "Mike",
+        lastName: "Manners",
+        alternativeEmail: "personalmail@itsolver.net",
+        phone: "0733120457",
         domain: 'test.com',
+        abn: '123567890',
         email: 'some location'
       }
     ];
@@ -137,8 +153,17 @@ describe('Establishments reducer', () => {
     const initialUsers = [
       {
         name: 'test name',
-        location: 'test location',
+        locationStreet1: "Suite 5, Level 2",            
+        locationStreet2: "123 Test Street",
+        locationSuburb: "Brisbane",
+        locationState: "Queensland",
+        locationPostcode: "4000",
+        firstName: "Mike",
+        lastName: "Manners",
+        alternativeEmail: "personalmail@itsolver.net",
+        phone: "0733120457",
         domain: 'test.com',
+        abn: '123567890',
         email: 'test email',
         id: 'test id',
         tenant: 'test tenant',
@@ -149,8 +174,17 @@ describe('Establishments reducer', () => {
     const resultUsers = [
       {
         name: 'test name 2',
-        location: 'test location',
+        locationStreet1: "Suite 5, Level 2",            
+        locationStreet2: "123 Test Street",
+        locationSuburb: "Brisbane",
+        locationState: "Queensland",
+        locationPostcode: "4000",
+        firstName: "Mike",
+        lastName: "Manners",
+        alternativeEmail: "personalmail@itsolver.net",
+        phone: "0733120457",
         domain: 'test.com',
+        abn: '123567890',
         email: 'test email',
         id: 'test id',
         tenant: 'test tenant',
@@ -163,8 +197,17 @@ describe('Establishments reducer', () => {
       USERS_MODIFY_USER_SUCCESS({
         user: {
           name: 'test name 2',
-          location: 'test location',
+          locationStreet1: "Suite 5, Level 2",            
+          locationStreet2: "123 Test Street",
+          locationSuburb: "Brisbane",
+          locationState: "Queensland",
+          locationPostcode: "4000",
+          firstName: "Mike",
+          lastName: "Manners",
+          alternativeEmail: "personalmail@itsolver.net",
+          phone: "0733120457",
           domain: 'test.com',
+          abn: '123567890',
           email: 'test email',
           tenant: 'test tenant',
           logoUrl: 'some logo'

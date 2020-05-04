@@ -105,6 +105,16 @@ export const createUser = ({
   email,
   location,
   domain,
+  abn,
+  locationStreet1,
+  locationStreet2,
+  locationSuburb,
+  locationState,
+  locationPostcode,
+  firstName,
+  lastName,
+  alternativeEmail,
+  phone,
   file,
   createdAt,
   isAdmin
@@ -131,6 +141,16 @@ export const createUser = ({
     body.append('name', name);
     body.append('location', location);
     body.append('domain', domain);
+    body.append('abn', abn);
+    body.append('locationStreet1', locationStreet1);
+    body.append('locationStreet2', locationStreet2);
+    body.append('locationSuburb', locationSuburb);
+    body.append('locationState', locationState);
+    body.append('locationPostcode', locationPostcode);
+    body.append('firstName', firstName);
+    body.append('lastName', lastName);
+    body.append('alternativeEmail', alternativeEmail);
+    body.append('phone', phone);    
     body.append('email', email);
     body.append('password', uuid());
     body.append('tenant', tenant);
@@ -184,6 +204,16 @@ export const modifyUser = ({
   name,
   location,
   domain,
+  abn,
+  locationStreet1,
+  locationStreet2,
+  locationSuburb,
+  locationState,
+  locationPostcode,
+  firstName,
+  lastName,
+  alternativeEmail,
+  phone,
   isAdmin,
   file,
   createdAt,
@@ -213,6 +243,16 @@ export const modifyUser = ({
     body.append('name', name);
     body.append('location', location);
     body.append('domain', domain);
+    body.append('abn', abn);
+    body.append('locationStreet1', locationStreet1);
+    body.append('locationStreet2', locationStreet2);
+    body.append('locationSuburb', locationSuburb);
+    body.append('locationState', locationState);
+    body.append('locationPostcode', locationPostcode);
+    body.append('firstName', firstName);
+    body.append('lastName', lastName);
+    body.append('alternativeEmail', alternativeEmail);
+    body.append('phone', phone);       
     body.append('tenant', tenant);
     body.append('createdAt', createdAt);
     body.append('isAdmin', isAdmin);

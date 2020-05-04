@@ -43,12 +43,20 @@ rl.question('Enter the path to the service account key file: ', path => {
           .ref(`users/${uid}`)
           .set({
             isAdmin: true,
-            tenant,
-            name: 'Test Name',
-            location: 'Test Location',
+            name: 'Test Company',
             domain: 'test.com',
+            abn: '1234567890',
+            locationStreet1: "Suite 5, Level 2",            
+            locationStreet2: "123 Test Street",
+            locationSuburb: "Brisbane",
+            locationPostcode: "4000",
+            firstName: "Mike",
+            lastName: "Manners",
+            alternativeEmail: "personalmail@itsolver.net",
+            phone: "0733120457",
+            email,
+            tenant,
             createdAt: new Date().toDateString(),
-            email
           });
 
         console.log('Created admin account in database');

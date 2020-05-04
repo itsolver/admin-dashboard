@@ -87,8 +87,17 @@ export const usersReducer = createReducer(
         if (elem.id === payload.id) {
           return {
             name: payload.user.name,
-            location: payload.user.location,
             domain: payload.user.domain,
+            abn: payload.user.abn,
+            locationStreet1: payload.locationStreet1,
+            locationStreet2: payload.locationStreet2,
+            locationSuburb: payload.locationSuburb,
+            locationState: payload.locationState,
+            locationPostcode: payload.locationPostcode,
+            firstName: payload.firstName,
+            lastName: payload.lastName,
+            alternativeEmail: payload.alternativeEmail,
+            phone: payload.phone,
             id: payload.id,
             tenant: payload.user.tenant,
             logoUrl: payload.user.logoUrl,

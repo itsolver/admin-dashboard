@@ -40,6 +40,16 @@ const createUserOnDb = async (
   email,
   location,
   domain,
+  abn,
+  locationStreet1,
+  locationStreet2,
+  locationSuburb,
+  locationState,
+  locationPostcode,
+  firstName,
+  lastName,
+  alternativeEmail,
+  phone,
   tenant,
   logoUrl,
   userId,
@@ -51,6 +61,16 @@ const createUserOnDb = async (
     email,
     location,
     domain,
+    abn,
+    locationStreet1,
+    locationStreet2,
+    locationSuburb,
+    locationState,
+    locationPostcode,
+    firstName,
+    lastName,
+    alternativeEmail,
+    phone,
     tenant,
     logoUrl,
     createdAt,
@@ -86,7 +106,15 @@ router.post('/', (request, response) => {
     });
 
     busboy.on('finish', async () => {
-      const { name, email, password, location, domain, tenant, createdAt } = fieldData;
+      const { name, email, password, location, domain, abn, locationStreet1,
+        locationStreet2,
+        locationSuburb,
+        locationState,
+        locationPostcode,
+        firstName,
+        lastName,
+        alternativeEmail,
+        phone, tenant, createdAt } = fieldData;
 
       const isAdmin = JSON.parse(fieldData.isAdmin);
 
@@ -125,6 +153,16 @@ router.post('/', (request, response) => {
           email,
           location,
           domain,
+          abn,
+          locationStreet1,
+          locationStreet2,
+          locationSuburb,
+          locationState,
+          locationPostcode,
+          firstName,
+          lastName,
+          alternativeEmail,
+          phone,
           tenant,
           logoUrl,
           id,
@@ -142,6 +180,16 @@ router.post('/', (request, response) => {
         name,
         location,
         domain,
+        abn,
+        locationStreet1,
+        locationStreet2,
+        locationSuburb,
+        locationState,
+        locationPostcode,
+        firstName,
+        lastName,
+        alternativeEmail,
+        phone,
         email,
         tenant,
         logoUrl,
@@ -189,8 +237,24 @@ const modifyUserAuth = (userId, isAdmin, tenant) => {
   });
 };
 
-const modifyUserDb = (name, location, domain, createdAt, isAdmin, logoUrl, userId) => {
-  let params = { name, location, domain, createdAt, isAdmin };
+const modifyUserDb = (name, location, domain, abn, locationStreet1,
+  locationStreet2,
+  locationSuburb,
+  locationState,
+  locationPostcode,
+  firstName,
+  lastName,
+  alternativeEmail,
+  phone, createdAt, isAdmin, logoUrl, userId) => {
+  let params = { name, location, domain, abn, locationStreet1,
+  locationStreet2,
+  locationSuburb,
+  locationState,
+  locationPostcode,
+  firstName,
+  lastName,
+  alternativeEmail,
+  phone, createdAt, isAdmin };
 
   if (logoUrl) params['logoUrl'] = logoUrl;
 
@@ -239,7 +303,15 @@ router.patch('/:id', (request, response) => {
     });
 
     busboy.on('finish', async () => {
-      const { name, location, domain, createdAt, tenant } = fieldData;
+      const { name, location, domain, abn, locationStreet1,
+  locationStreet2,
+  locationSuburb,
+  locationState,
+  locationPostcode,
+  firstName,
+  lastName,
+  alternativeEmail,
+  phone, createdAt, tenant } = fieldData;
 
       const isAdmin = JSON.parse(fieldData.isAdmin);
 
@@ -267,6 +339,16 @@ router.patch('/:id', (request, response) => {
         name,
         location,
         domain,
+        abn,
+        locationStreet1,
+        locationStreet2,
+        locationSuburb,
+        locationState,
+        locationPostcode,
+        firstName,
+        lastName,
+        alternativeEmail,
+        phone,
         createdAt,
         isAdmin,
         logoUrl,
@@ -285,6 +367,16 @@ router.patch('/:id', (request, response) => {
         name,
         location,
         domain,
+        abn,
+        locationStreet1,
+        locationStreet2,
+        locationSuburb,
+        locationState,
+        locationPostcode,
+        firstName,
+        lastName,
+        alternativeEmail,
+        phone,
         tenant,
         logoUrl,
         isAdmin,
