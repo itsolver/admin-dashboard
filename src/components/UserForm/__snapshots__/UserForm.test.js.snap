@@ -40,6 +40,7 @@ exports[`<UserForm /> rendering should render without crashing 1`] = `
       userData={
         Object {
           "createdAt": "11/21/2020",
+          "domain": "test.com",
           "email": "mkrukuy@gmail.com",
           "file": null,
           "id": "test id",

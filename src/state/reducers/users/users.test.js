@@ -53,6 +53,7 @@ describe('Establishments reducer', () => {
         name: 'Test name',
         email: 'Test email',
         location: 'Test location',
+        domain: 'test.com',
         createdAt: '11/20/2020'
       }
     ];
@@ -106,6 +107,7 @@ describe('Establishments reducer', () => {
       {
         name: 'some name',
         location: 'some location',
+        domain: 'test.com',
         email: 'some location'
       }
     ];
@@ -136,6 +138,7 @@ describe('Establishments reducer', () => {
       {
         name: 'test name',
         location: 'test location',
+        domain: 'test.com',
         email: 'test email',
         id: 'test id',
         tenant: 'test tenant',
@@ -147,6 +150,7 @@ describe('Establishments reducer', () => {
       {
         name: 'test name 2',
         location: 'test location',
+        domain: 'test.com',
         email: 'test email',
         id: 'test id',
         tenant: 'test tenant',
@@ -160,6 +164,7 @@ describe('Establishments reducer', () => {
         user: {
           name: 'test name 2',
           location: 'test location',
+          domain: 'test.com',
           email: 'test email',
           tenant: 'test tenant',
           logoUrl: 'some logo'

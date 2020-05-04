@@ -88,6 +88,7 @@ export const usersReducer = createReducer(
           return {
             name: payload.user.name,
             location: payload.user.location,
+            domain: payload.user.domain,
             id: payload.id,
             tenant: payload.user.tenant,
             logoUrl: payload.user.logoUrl,

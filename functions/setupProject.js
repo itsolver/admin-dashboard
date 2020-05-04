@@ -46,6 +46,7 @@ rl.question('Enter the path to the service account key file: ', path => {
             tenant,
             name: 'Test Name',
             location: 'Test Location',
+            domain: 'test.com',
             createdAt: new Date().toDateString(),
             email
           });

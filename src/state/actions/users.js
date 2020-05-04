@@ -104,6 +104,7 @@ export const createUser = ({
   name,
   email,
   location,
+  domain,
   file,
   createdAt,
   isAdmin
@@ -129,6 +130,7 @@ export const createUser = ({
 
     body.append('name', name);
     body.append('location', location);
+    body.append('domain', domain);
     body.append('email', email);
     body.append('password', uuid());
     body.append('tenant', tenant);
@@ -181,6 +183,7 @@ export const createUser = ({
 export const modifyUser = ({
   name,
   location,
+  domain,
   isAdmin,
   file,
   createdAt,
@@ -209,6 +212,7 @@ export const modifyUser = ({
 
     body.append('name', name);
     body.append('location', location);
+    body.append('domain', domain);
     body.append('tenant', tenant);
     body.append('createdAt', createdAt);
     body.append('isAdmin', isAdmin);

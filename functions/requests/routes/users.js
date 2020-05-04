@@ -39,6 +39,7 @@ const createUserOnDb = async (
   name,
   email,
   location,
+  domain,
   tenant,
   logoUrl,
   userId,
@@ -49,6 +50,7 @@ const createUserOnDb = async (
     name,
     email,
     location,
+    domain,
     tenant,
     logoUrl,
     createdAt,
@@ -84,7 +86,7 @@ router.post('/', (request, response) => {
     });
 
     busboy.on('finish', async () => {
-      const { name, email, password, location, tenant, createdAt } = fieldData;
+      const { name, email, password, location, domain, tenant, createdAt } = fieldData;
 
       const isAdmin = JSON.parse(fieldData.isAdmin);
 
@@ -122,6 +124,7 @@ router.post('/', (request, response) => {
           name,
           email,
           location,
+          domain,
           tenant,
           logoUrl,
           id,
@@ -138,6 +141,7 @@ router.post('/', (request, response) => {
         id,
         name,
         location,
+        domain,
         email,
         tenant,
         logoUrl,
@@ -185,8 +189,8 @@ const modifyUserAuth = (userId, isAdmin, tenant) => {
   });
 };
 
-const modifyUserDb = (name, location, createdAt, isAdmin, logoUrl, userId) => {
-  let params = { name, location, createdAt, isAdmin };
+const modifyUserDb = (name, location, domain, createdAt, isAdmin, logoUrl, userId) => {
+  let params = { name, location, domain, createdAt, isAdmin };
 
   if (logoUrl) params['logoUrl'] = logoUrl;
 
@@ -235,7 +239,7 @@ router.patch('/:id', (request, response) => {
     });
 
     busboy.on('finish', async () => {
-      const { name, location, createdAt, tenant } = fieldData;
+      const { name, location, domain, createdAt, tenant } = fieldData;
 
       const isAdmin = JSON.parse(fieldData.isAdmin);
 
@@ -262,6 +266,7 @@ router.patch('/:id', (request, response) => {
       const modifyUser = modifyUserDb(
         name,
         location,
+        domain,
         createdAt,
         isAdmin,
         logoUrl,
@@ -279,6 +284,7 @@ router.patch('/:id', (request, response) => {
         id,
         name,
         location,
+        domain,
         tenant,
         logoUrl,
         isAdmin,

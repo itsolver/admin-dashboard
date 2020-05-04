@@ -206,6 +206,7 @@ describe('Auth reducer', () => {
       isAdmin: false,
       name: 'some name',
       location: 'some location',
+      domain: 'test.com',
       tenant: 'some tenantId',
       createdAt: '11/20/2020'
     };

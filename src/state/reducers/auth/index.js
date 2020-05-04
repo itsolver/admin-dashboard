@@ -61,6 +61,7 @@ export const authReducer = createReducer(
         email: payload.email,
         name: payload.name,
         location: payload.location,
+        domain: payload.domain,
         logoUrl: payload.logoUrl,
         tenant: payload.tenant,
         createdAt: payload.createdAt
@@ -138,6 +139,7 @@ export const authReducer = createReducer(
         email: state.userData.email,
         isAdmin: payload.isAdmin,
         name: payload.name,
+        domain: payload.domain,
         location: payload.location,
         logoUrl: payload.logoUrl || state.userData.logoUrl,
         tenant: payload.tenant,

@@ -59,7 +59,7 @@ const UserForm = ({ isEditing, isProfile, userData, action }) => {
   }
 
   const canSubmit =
-    user.name && user.location && user.createdAt && !invalidEmail;
+    user.name && user.location && user.domain && user.createdAt && !invalidEmail;
 
   const imagePreviewUrl = !user.logoUrl
     ? user.file && URL.createObjectURL(user.file)
@@ -161,6 +161,26 @@ const UserForm = ({ isEditing, isProfile, userData, action }) => {
                           name="location"
                           required
                           value={user.location}
+                          onChange={onChangeHandler}
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="field is-horizontal">
+                  <div className="field-label is-normal">
+                    <label className="label">Domain</label>
+                  </div>
+                  <div className="field-body">
+                    <div className="field">
+                      <div className="control">
+                        <input
+                          className="input"
+                          type="text"
+                          name="domain"
+                          required
+                          value={user.domain}
                           onChange={onChangeHandler}
                         />
                       </div>
@@ -332,6 +352,18 @@ const UserForm = ({ isEditing, isProfile, userData, action }) => {
                 </div>
               </div>
 
+              <div className="field">
+                <label className="label">Domain</label>
+                <div className="control is-clearfix">
+                  <input
+                    type="text"
+                    readOnly="readOnly"
+                    className="input is-static"
+                    value={user.domain}
+                  />
+                </div>
+              </div>
+
               {!isProfile && (
                 <div className="field">
                   <label className="label">Admin</label>
@@ -375,6 +407,7 @@ UserForm.propTypes = {
     isAdmin: PropTypes.bool.isRequired,
     name: PropTypes.string.isRequired,
     location: PropTypes.string.isRequired,
+    domain: PropTypes.string.isRequired,
     logoUrl: PropTypes.string,
     tenant: PropTypes.string,
     createdAt: PropTypes.string.isRequired

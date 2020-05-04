@@ -22,6 +22,7 @@ const User = () => {
     name: '',
     email: '',
     location: '',
+    domain: '',
     isAdmin: false,
     file: null,
     createdAt: new Date().toDateString()

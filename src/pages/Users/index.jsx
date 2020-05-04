@@ -77,8 +77,12 @@ const Users = () => {
       disableSortBy: true
     },
     {
-      Header: 'Name',
+      Header: 'Organisation Name',
       accessor: 'name'
+    },
+    {
+      Header: 'Domain',
+      accessor: 'domain'
     },
     {
       Header: 'Email',
